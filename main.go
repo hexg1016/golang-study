@@ -1,11 +1,13 @@
 package main
 
 import (
-	"git.shiyou.kingsoft.com/server/rpc-net"
+	"encoding/json"
+	"fmt"
+	"log"
+	"reflect"
 )
 
 var count int64
-var rpcServer rpcnet.RpcNetBase
 
 type Header struct {
 	len   int32
@@ -13,7 +15,7 @@ type Header struct {
 }
 
 func main() {
-	/*data := `{"Key":"2", "3": "4"}`
+	data := `{"Key":"2", "3": "4"}`
 	var v interface{}
 	if err := json.Unmarshal([]byte(data), &v); err != nil {
 		log.Fatal(err)
@@ -39,7 +41,7 @@ func main() {
 			fmt.Println(reflect.TypeOf(keyValue), keyValue)
 		}
 	}
-	config := api.DefaultConfig()
+	/*config := api.DefaultConfig()
 	config.Address = "127.0.0.1:8501"
 	config.Token = "e8868b1b-92a7-6937-8ca8-4365dbbefe50"
 	client, err := api.NewClient(config)
