@@ -12,7 +12,7 @@ var wg sync.WaitGroup
 
 func Action(tmpI int) {
 
-	addr, err := net.ResolveIPAddr("ip", "172.19.207.130")
+	addr, err := net.ResolveIPAddr("ip", "127.0.0.1")
 	if err != nil {
 		fmt.Println("Resolvtion error", err.Error())
 

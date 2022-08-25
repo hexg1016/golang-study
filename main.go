@@ -41,6 +41,9 @@ func main() {
 			fmt.Println(reflect.TypeOf(keyValue), keyValue)
 		}
 	}
+	content := "{\"post\":{\"title\":" + "hello" + ",\"content\":[[\"tag\":\"text\",\"text\":" + "haha" +
+		",\"href\":" + "req.URL" + "]]}}"
+	fmt.Println(content)
 	/*config := api.DefaultConfig()
 	config.Address = "127.0.0.1:8501"
 	config.Token = "e8868b1b-92a7-6937-8ca8-4365dbbefe50"
